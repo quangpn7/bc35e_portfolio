@@ -1,0 +1,74 @@
+/* GLOBAL */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Hind", "sans-serif";
+}
+
+/* HEADER */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+/* BEFORE HOVER */
+#portnavbar .nav-link::after {
+  content: "";
+  background-color: #35a22c;
+  width: 0;
+  height: 2px;
+  margin-top: 0.625rem;
+  display: block;
+  transition: all 0.5s linear;
+}
+/* AFTER HOVER  */
+#portnavbar .nav-link:hover::after {
+  width: 100%;
+}
+
+#portnavbar .active .nav-link::after {
+  width: 100%;
+}
+
+/* CAROUSEL */
+.portAvatar {
+  border-radius: 50%;
+  width: 140px;
+}
+
+/* vw: viewport width (font-size cho slogan hay banner)
+
+vh: viewport height (measure unit based on browser size*/
+
+#portCarouselID .carousel-item {
+  height: 100vh;
+}
+#portCarouselID .carousel-item > img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+/* CAPTION */
+
+#portCarouselID .carousel-caption {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#portCarouselID .carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+#portCarouselID .carousel-indicators li.active {
+  background-color: #35a22c;
+}
